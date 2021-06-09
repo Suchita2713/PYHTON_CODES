@@ -22,17 +22,28 @@ def display(head):
     while head is not None:
         print(str(head.data)+"->",end="")
         head=head.next
+        
 def length(head):
     c=0
     while head is not None:
         c+=1
         head=head.next
     return c
+
+def ith(head):
+    i=int(input("Enter the position"))
+    count=0
+    while head:
+        
+       
+        if count==i:
+            return head.data
+            break
+        count+=1
+        head=head.next
+    return -1
         
 head=takeInput()
 print(display(head))
 print(length(head))
-        
-            
-        
-    
+print(ith(head))
